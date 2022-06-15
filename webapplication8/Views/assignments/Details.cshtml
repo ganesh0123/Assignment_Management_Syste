@@ -1,0 +1,34 @@
+﻿@model webapplication8.assignment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>assignment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.assignmentname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assignmentname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblogin.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblogin.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.assignmentid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

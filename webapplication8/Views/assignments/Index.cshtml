@@ -1,0 +1,41 @@
+﻿@model IEnumerable<webapplication8.assignment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.assignmentname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblogin.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.assignmentname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblogin.username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.assignmentid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.assignmentid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.assignmentid })
+        </td>
+    </tr>
+}   
+    
+
+
+</table>

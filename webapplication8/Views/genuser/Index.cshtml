@@ -1,0 +1,16 @@
+﻿@model webapplication8.tblogin
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hi generaluser</h2>
+
+
+<p>You can see the details of the assignment and download the assignment from the database and can see the list of assignment and also can change the own password.</p>
+<br />
+<input type="button" value="View Assignment Details" onclick="location.href='@Url.Action("AssignmentDetails", "Accounts")'" />
+
+<input type="button" value="Change Password" onclick="location.href='@Url.Action("dashboard", "Accounts")'" />
+
+<input type="button" value="Download Assignment" onclick="location.href='@Url.Action("Downloads", "Accounts")'" />
